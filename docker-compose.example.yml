@@ -1,0 +1,13 @@
+app-vol:
+  image: busybox
+  volumes:
+    - '/apps/google-config:/.config'
+    - '/apps/supervisor-config:/etc/supervisor/conf.d'
+    - '/apps/webapp:/var/www/html'
+  command: tail -f /dev/null
+app:
+  build: .
+  volumes_from:
+    - app-vol
+  ports:
+    - "80:80"

@@ -17,6 +17,7 @@ RUN apt-get install -y -qq --no-install-recommends wget unzip python openjdk-7-j
 RUN apt-get install -y -qq --no-install-recommends supervisor
 
 # Setup Google Cloud
+WORKDIR /
 # Install the Google Cloud SDK.
 ENV HOME /
 ENV CLOUDSDK_PYTHON_SITEPACKAGES 1
