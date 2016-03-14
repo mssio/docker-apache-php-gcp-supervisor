@@ -48,4 +48,4 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 VOLUME ["/etc/supervisor/conf.d"]
 COPY docker-entrypoint.sh /entrypoint.sh
 WORKDIR /var/www/html
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/entrypoint.sh"]
