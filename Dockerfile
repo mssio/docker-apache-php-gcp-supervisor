@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get install -y -qq --no-install-recommends wget unzip python openjdk-7-jre-headless openssh-client python-openssl
 # Supervisor Dependencies
 RUN apt-get install -y -qq --no-install-recommends supervisor
+# Composer Dependencies
+RUN apt-get install -y -qq --no-install-recommends git
 
 # Setup Google Cloud
 WORKDIR /
