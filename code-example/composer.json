@@ -1,0 +1,14 @@
+{
+    "name": "mssio/docker-apache-php-gcp-supervisor",
+    "description": "Docker project that include google cloud platform, apache, php, and run using supervisor",
+    "authors": [
+        {
+            "name": "Mario Suharua",
+            "email": "marioo@mss.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "andrioli/hello-composer": "dev-master"
+    }
+}
