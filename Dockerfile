@@ -46,6 +46,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Enable Required Apache Module
+RUN a2enmod rewrite
+
 # Run Application
 VOLUME ["/etc/supervisor/conf.d"]
 COPY docker-entrypoint.sh /entrypoint.sh
