@@ -39,7 +39,7 @@ ENV PATH /google-cloud-sdk/bin:$PATH
 VOLUME ["/.config"]
 
 # Install Composer
-ENV COMPOSER_VERSION 1.0.0-alpha8
+ENV COMPOSER_VERSION 1.0.0-beta1
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION}
 
 # Cleanup
