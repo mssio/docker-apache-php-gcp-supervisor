@@ -1,5 +1,6 @@
 app-vol:
   image: busybox
+  container_name: app-vol
   volumes:
     - '/apps/google-config:/.config'
     - '/apps/supervisor-config:/etc/supervisor/conf.d'
@@ -7,6 +8,7 @@ app-vol:
   command: tail -f /dev/null
 app:
   build: .
+  container_name: app
   volumes_from:
     - app-vol
   ports:
