@@ -1,3 +1,17 @@
+# Project Information
+
+This project contains:
+
+ - based on php:5.6.19-apache with this module installed:
+   - mcrypt
+   - gd
+ - supervisor installed
+ - composer installed & configured
+ - Google Cloud Library installed based on it's Dockerfile (https://github.com/GoogleCloudPlatform/cloud-sdk-docker/blob/master/Dockerfile) on March 15 2016.
+ - entrypoint will do composer install in /var/www/html and then start the supervisor (make sure supervisor configuration is correct to prevent any errors).
+
+
+
 # Step by step how to setup this instance:
 
 - Copy docker-compose.example.yml to docker-compose.yml and update it to match your environment configuration
