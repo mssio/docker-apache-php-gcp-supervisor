@@ -4,6 +4,7 @@ app-vol:
   volumes:
     - '/apps/google-config:/.config'
     - '/apps/supervisor-config:/etc/supervisor/conf.d'
+    - '/apps/cron-config:/.cron-config'
     - '/apps/webapp:/var/www/html'
   command: tail -f /dev/null
 app:

@@ -16,6 +16,7 @@ This project contains:
 
 - Copy docker-compose.example.yml to docker-compose.yml and update it to match your environment configuration
 - Make sure volume configuration in docker-compose.yml match your environment configuration (Use code-example to run hello world app and supervisord.example.conf for supervisor configuration)
+- Setup cron.conf configuration inside .cron-config volume
 - Run app-vol instance:
 
 ```sh
