@@ -9,5 +9,8 @@ if test -e "/.cron-config/cron.conf";then
   cron
 fi
 
+# Set app owner
+chown -R www-data:www-data /var/www/html
+
 # Run supervisor
 /usr/bin/supervisord
