@@ -48,6 +48,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Set php configuration
+COPY config/php.ini /usr/local/etc/php/
+
 # Enable Required Apache Module
 RUN a2enmod rewrite
 
