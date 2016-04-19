@@ -9,6 +9,11 @@ if test -e "/.cron-config/cron.conf";then
   cron
 fi
 
+# Setup supervisor configuration
+if test -e "/supervisor/supervisord.conf";then
+  cp /supervisor/supervisord.conf /etc/supervisor/supervisord.conf
+fi
+
 # Set app owner
 chown -R www-data:www-data /var/www/html
 
