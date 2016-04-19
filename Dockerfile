@@ -56,6 +56,8 @@ RUN a2enmod rewrite
 
 # Run Application
 VOLUME ["/etc/supervisor/conf.d"]
+RUN mkdir /supervisor
+VOLUME ["/supervisor"]
 RUN mkdir /.cron-config
 VOLUME ["/.cron-config"]
 COPY docker-entrypoint.sh /entrypoint.sh
